@@ -99,6 +99,7 @@ MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
     const updateHideNamespace = throttle(hideNamespace, 1000);
     const obsNamespace = new MutationObserver(updateHideNamespace);
+    const watchTarget = document.getElementById("app-container");
     obsNamespace.observe(watchTarget, {
       subtree: true,
       attributes: true,
